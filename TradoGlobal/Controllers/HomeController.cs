@@ -20,10 +20,7 @@ namespace TradoGlobal.Controllers
             return View();
         }
 
-        //public IActionResult Privacy()
-        //{
-        //    return View();
-        //}
+        
 
         public IActionResult Privacy()
         {
