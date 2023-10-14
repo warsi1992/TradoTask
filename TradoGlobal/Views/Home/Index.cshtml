@@ -28,49 +28,7 @@
 <script>
 
 
-        function Save(){
-            var text=$("#txt").val();
-            var gender = $("input[name='gender']:checked").val();
-
-            // Get the values of selected hobbies
-            var hobbies ="";
-            $("input[name='hobbies']:checked").each(function () {
-                hobbies += $(this).val() + ',';
-            });
-            console.log('success');
-
-            inserRecord(text, gender, hobbies);
-
-
-
-        }
-
-        function reset(){
-            $("#txt").val('');
-            $('input[name="gender"]').prop("checked", false);
-            $('input[name="hobbies"]').prop('checked', false);
-        }
-
-
-        function inserRecord(name,gender,hobbies){
-            $.ajax({
-                url: 'Home/inserintoDb',
-                type:'Post',
-                data:{Name:name,Gender:gender,Hobby:hobbies},
-                success:function(data){
-                console.log('Success');
-                reset();
-                },
-                error: function (data) {
-                    console.log('Error');
-                }
-
-
-
-
-            });
-
-        }
+        
 
 
         $(document).on('change', '#selectFiles', function (event) {
